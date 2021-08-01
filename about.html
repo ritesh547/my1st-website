@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>about</title>
+    <link rel="shortcut icon" href="images/Nareshi.jpg">
+    <link rel="stylesheet" href="node_modules/Fonts/css/all.css">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+</head>
+
+<body class="container-fluid">
+    <h3 class="text-center my-5 font-weight-bold">Naresh Institute and Technologies</h3>
+    <br>
+    
+    <!-- nav start -->
+    <nav class="navbar nav-pill navbar-dark bg-dark ">
+
+        <ul class="navbar nav">
+            <li class="nav-item"><a href="index.html" class="nav-link text-light"><i class="fa fa-home"></i> home</a>
+            </li>
+            <li class="nav-item"><a href="about.html" class="nav-link text-light"><i
+                        class="far fa-question-circle"></i>about</a></li>
+            <li class="nav-item"><a href="services.html" class="nav-link text-light"><i
+                        class="far fa-question-circle"></i>services</a></li>
+            <li class="nav-item"><a href="contact.html" class="nav-link text-light"><i
+                        class="fas fa-mobile-alt"></i>contact us</a></li>
+        </ul>
+        <ul class="navbar nav navbar-light">
+            <a class="btn btn-dark nav-item dropdown">
+                <a href="#" class="nav-link text-light dropdown-toggle" data-toggle="dropdown"> <i
+                        class="fas fa-sign-in-alt"></i>sing in</a>
+
+                <div class="dropdown-menu">
+                    <a href="signin.html" class="dropdown-item"><i class="fas fa-sign-in-alt"></i>sign in</a>
+                    <a href="ragister.html" class="dropdown-item"><i class="far fa-registered"></i>ragister</a>
+                </div>
+            </a>
+        </ul>
+    </nav>
+    <!-- nav end -->
+    <table class="table table-bordered container my-5 table-hover">
+        <thead class="table-info ">
+            <th>id</th>
+            <th>Course Name</th>
+            <th>Faculty Name</th>
+            <th>Duration</th>
+            <th>timing</th>
+            <th>view</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>angular 8</td>
+                <td>sudhakar sharma sir</td>
+                <td>45 days</td>
+                <td>7:30 AM</td>
+
+                <td>
+                    <button type="button" class="viewmodal btn btn-warning btn-sm" data-toggle="modal">view <i
+                            class="fa fa-eye"></i></button>
+                </td>
+                <td style='display:none'>Angular 8 is a client-side TypeScript based framework which is used to create
+                    dynamic web applications. It is very similar to its previous versions except having some extensive
+                    features.
+                </td>
+
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Node js</td>
+                <td>shambha sir</td>
+                <td>45 days</td>
+                <td>9:00 AM</td>
+                <td>
+                    <button type="button" class="viewmodal btn btn-warning btn-sm" data-toggle="modal">view <i
+                            class="fa fa-eye"></i></button>
+                </td>
+                <td style='display:none'>Node.js connects the ease of a scripting language (JavaScript) with the power
+                    of Unix network programming. Node.js was built on the Google V8 JavaScript engine since it was
+                    open-sourced under the BSD license.
+                </td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>core java</td>
+                <td>Hari Krishna sir</td>
+                <td>60 days</td>
+                <td>4:30 PM</td>
+                <td>
+                    <button type="button" class="viewmodal btn btn-warning btn-sm" data-toggle="modal">view <i
+                            class="fa fa-eye"></i></button>
+                </td>
+                <td style='display:none'>Java is an object-oriented programming language developed by Sun Microsystems,
+                    and it was released in 1995. ... Java Virtual Machine (JVM) executes Java code, but it has been
+                    written in platform-specific languages such as C/C++/ASM, etc.
+                </td>
+            </tr>
+        </tbody>
+
+
+        <!-- Model Start -->
+
+
+        <div id="myModal" class="modal fade" role="dialog">
+            <div class="modal-dialog modal-md">
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">
+                            <center>Details</center>
+                        </h4>
+                    </div>
+                    <div class="modal-body">
+                        <form role="form">
+
+                            <div class="row">
+                                <div class="col-xs-4 text-info"><strong>Course:</strong></div>
+                                <div class="col-xs-8 text-warning"><span id="cname"></span></div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-4 text-info"><strong>Faculty:</strong></div>
+                                <div class="col-xs-8 text-warning"><span id="fname"></span></div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-4 text-info"><strong>Durations:</strong></div>
+                                <div class="col-xs-8 text-warning"><span id="duration"></span></div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-4 text-info"><strong>Timings:</strong></div>
+                                <div class="col-xs-8 text-warning"><span id="time"></span></div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-4 text-info"><strong>Description:</strong></div>
+                                <div class="col-xs-8 text-warning"><span id="desc"></span></div>
+                            </div>
+                            <br>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-sm btn-warning" data-dismiss="modal">
+                            <i class="fa fa-close"></i> Close
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Model Close -->
+
+
+    </table>
+    <!-- footer start -->
+    <footer class="bg-dark text-white p-4">
+        <h4 class="mb-4">
+            <center>naresh-i-technologis</center>
+        </h4>
+        <div class="row">
+            <div class="col-4">
+                <ul>
+                    <li><a class="text-light" href="https://www.facebook.com/nareshit/" target="_blank"><i class="fab fa-facebook-f"></i>facebook</a></li>
+            <li><a class="text-light" href="https://www.facebook.com/nareshit/" target="_blank"><i class="fab fa-google"></i>google</a></li>
+            <li><a class="text-light" href="https://www.facebook.com/nareshit/" target="_blank"><i class="fab fa-twitter"></i>twitter</a></li>
+            <li><a class="text-light" href="https://www.facebook.com/nareshit/" target="_blank"><i class="fab fa-youtube"></i>youtube</a></li>
+                   
+                </ul>
+            </div>
+            <div class="col-4">
+                <ul>
+                    <li> <a href="index.html" class="text-light">home</a></li>
+                    <li><a href="services.html" class="text-light">services</a></li>
+                    <li><a href="contact.html" class="text-light">contact</a></li>
+                    <li><a href="about.html" class="text-light">about</a></li>
+                </ul>
+            </div>
+            <div class="col-4">
+                <ul>
+                    <li>Name : Naresh Istitute</li>
+                    <li>Email : info@nareshit.com</li>
+                    <li>Contact : +91-xxxxxxxxxx</li>
+                    <li>Address : Sr nagar, Hyderabad, Telangana, India</li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <!-- footer end -->
+    <script type="text/javascript">
+
+        $('.viewmodal').click(function () {
+            $('#id').text($(this).closest("tr").find('td:eq(0)').text());
+            $('#cname').text($(this).closest("tr").find('td:eq(1)').text());
+            $('#fname').text($(this).closest("tr").find('td:eq(2)').text());
+            $('#duration').text($(this).closest("tr").find('td:eq(3)').text());
+            $('#time').text($(this).closest("tr").find('td:eq(4)').text());
+            $('#desc').text($(this).closest("tr").find('td:eq(6)').text());
+
+            $('#myModal').modal('show');
+
+        });
+    </script>
+
+  <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+
+</html>
